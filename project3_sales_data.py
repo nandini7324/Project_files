@@ -1,4 +1,4 @@
-# Project 4 - Sales Data Analysis
+# Project 3 - Sales Data Analysis
 # Analysis of monthly sales data and visualize trends.
 
 import pandas as pd
