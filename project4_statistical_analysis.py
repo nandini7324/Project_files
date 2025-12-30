@@ -1,3 +1,9 @@
+"""Amazon India Warehouse Operations: StatisticalAnalysis
+Company Background :Amazon India operates a large fulfillment center in Bengaluru. The HR analytics team wants to evaluate
+employee working hours to optimize operations and ensure compliance with labor standards.
+Population Data (All Employees)
+The daily working hours (in hours) of all 25 warehouse employees on a particular day are :
+"""
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
@@ -7,7 +13,7 @@ population=np.array([8.2, 9.0, 8.7, 9.5, 10.1,
 8.6, 9.7, 9.2, 8.4, 9.9,
 10.3, 9.5, 8.9, 9.6, 8.7])
 
-## Random sampling without replacement
+## Random sampling 
 let_samplesize=8
 sample=np.random.choice(population ,size=let_samplesize,replace=False)
 print(sample)
