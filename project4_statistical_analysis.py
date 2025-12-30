@@ -82,6 +82,7 @@ plt.show()
 # Hypothesis Testing
 # Null Hypothesis (H0): μ = 9
 # Alternative Hypothesis (H1): μ ≠ 9
+print("\nClaim 1: The average daily working hours of warehouse employees is 9 hours.")
 from scipy import stats
 t_statistic, p_value = stats.ttest_1samp(sample, 9)
 alpha = 0.05
@@ -96,6 +97,7 @@ else:
 ##Claim 2 (Overtime Issue):Less than 10% of employees are working more than 10 hours in a day.
 # Null Hypothesis (H0): p >= 0.10
 # Alternative Hypothesis (H1): p < 0.10
+print("\nClaim 2 (Overtime Issue):Less than 10% of employees are working more than 10 hours in a day.")
 overtime_count = np.sum(population > 10)
 n = len(population)
 p_hat = overtime_count / n
@@ -113,6 +115,7 @@ else:
 ##Claim 3 (Underperformance Check):No employee works less than 8 hours in a day.
 # Null Hypothesis (H0): p = 0
 # Alternative Hypothesis (H1): p > 0
+print("\nClaim 3 (Underperformance Check): No employee works less than 8 hours in a day.")
 underperformance_count = np.sum(population < 8)
 n = len(population)
 p_hat = underperformance_count / n
@@ -130,6 +133,7 @@ else:
 ## Claim 4 (Workload Balance):The working hours are evenly distributed without extreme outliers.
 # Null Hypothesis (H0): No outliers present
 # Alternative Hypothesis (H1): Outliers present
+print("\nClaim 4 (Workload Balance): The working hours are evenly distributed without extreme outliers.")
 Q1 = np.percentile(population, 25)
 Q3 = np.percentile(population, 75)
 IQR = Q3 - Q1
